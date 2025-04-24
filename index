@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>cos</title>
 </head>
 <body>
@@ -21,9 +22,24 @@
 
         btn.addEventListener('click', function () {
             const parent = document.createElement('p');
-            parent.innerText='Nowy element';
+            parent.innerText= prompt("Wpisz coś");
             display.append(parent)
-        })
+        }) 
     </script>
+    <script>
+        function zmien(f) {
+          document.bgColor=f.kolory[f.kolory.selectedIndex].value;
+        }
+        </script>
+        
+        <form>
+          <select name="kolory" onchange="zmien(this.form)">
+            <option value="white">biały</option>
+            <option value="red">czerwony</option>
+            <option value="green">zielony</option>
+            <option value="gray">szary</option>
+            <option value="rgb(10,67,99)">inny</option>
+          </select>
+        </form>
 </body>
 </html>
