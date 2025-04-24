@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tworzenie elementów</h1>
+        <main>
+            <button>Dodaj element</button>
+        </main>
+        </header>
+    </div>
+    <script>  
+        const display = document.querySelector('main'); //stała do wyświetlania, querySelector wybiera element z html
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function () {
+            const parent = document.createElement('p');
+            parent.innerText='Nowy element';
+            display.append(parent)
+        })
+    </script>
+</body>
+</html>
